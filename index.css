@@ -1,0 +1,107 @@
+
+* {
+    font-family: Gotham Rounded;
+}
+
+body {
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(6,16,152,0.8132295154389881) 52%, rgba(21,179,198,1) 73%);
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+overflow: hidden;
+}
+
+.clock {
+    background-color: rgb(200, 199, 227);
+    height: 300px;
+    width: 300px;   
+    border-radius: 50%;
+    position: relative;
+}
+
+.clock .number {
+    --rotation: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    z-index: 0;
+    font-size: 25px;
+}
+
+.clock .number1 {--rotation: 30deg}
+.clock .number2 {--rotation: 60deg}
+.clock .number3 {--rotation: 90deg}
+.clock .number4 {--rotation: 120deg}
+.clock .number5 {--rotation: 150deg}
+.clock .number6 {--rotation: 180deg}
+.clock .number7 {--rotation: 210deg}
+.clock .number8 {--rotation: 240deg}
+.clock .number9 {--rotation: 270deg}
+.clock .number10 {--rotation: 300deg}
+.clock .number11 {--rotation: 330deg}
+
+
+.clock::after {
+    content: "";
+    position: absolute; 
+    z-index: 11;
+    background-color: black;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hourHand {
+    --rotation: 0;
+    position: absolute;
+    z-index: 10;
+    width:10px;
+    height: 35%;
+    border: solid white 1px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: black;
+    transform-origin: bottom;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%) rotate(calc(var(--rotation)* 1deg));
+
+}
+
+.minuteHand {
+    --rotation: 0;
+    z-index: 10;
+    position: absolute;
+    width: 7px;
+    height: 47%;
+    border: solid white 1px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: black;
+    transform-origin: bottom;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%) rotate(calc(var(--rotation)* 1deg))
+}
+
+.secondHand {
+    --rotation: 0;
+    z-index: 10;
+    position: absolute;
+    width: 1px;
+    height: 48%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: red;
+    transform-origin: bottom;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%) rotate(calc(var(--rotation)* 1deg))
+}
