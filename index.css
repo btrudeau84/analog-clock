@@ -3,9 +3,13 @@
     font-family: Gotham Rounded;
 }
 
+.description {
+    color: #b89600;
+}
+
 body {
-    background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(6,16,152,0.8132295154389881) 52%, rgba(21,179,198,1) 73%);
+
+background: linear-gradient(to right, #212529 68.5%, #b89600);
 display: flex;
 justify-content: center;
 align-items: center;
@@ -19,6 +23,7 @@ overflow: hidden;
     width: 300px;   
     border-radius: 50%;
     position: relative;
+    top: 100px;
 }
 
 .clock .number {
