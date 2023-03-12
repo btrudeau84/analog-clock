@@ -110,3 +110,14 @@ overflow: hidden;
     left: 50%;
     transform: translate(-50%) rotate(calc(var(--rotation)* 1deg))
 }
+
+.dropdown-menu {
+    opacity: .75;
+    background-color: black;
+}
+
+.dropdown-item {
+    color: #b89600;
+    opacity: 1;
+}
+
